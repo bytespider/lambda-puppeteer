@@ -1,0 +1,20 @@
+{
+  "name": "lambda-container-puppeteer",
+  "version": "1.0.0",
+  "description": "Example of running Puppeteer in a container on AWS Lambda",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "docker run --rm -v ~/.aws-lambda-rie:/aws-lambda -p 8085:8080 --entrypoint /aws-lambda/aws-lambda-rie puppeteer-example:latest /usr/bin/npx aws-lambda-ric app.handler"
+  },
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "Puppeteer"
+  ],
+  "author": "Rob Griffiths <rob@bytespider.dev>",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^13.1.3"
+  }
+}
